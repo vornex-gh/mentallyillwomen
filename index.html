@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Example</title>
+</head>
+<body>
+  <h1>Click the link below to play the video:</h1>
+  <a href="#" id="videoLink">Play Video</a>
+
+  <video id="videoPlayer" controls style="display:none">
+    <source src="path_to_video/video.mp4" type="video/mp4">
+    <!-- Add additional source elements for other video formats if needed -->
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    var videoLink = document.getElementById('videoLink');
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    videoLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      videoPlayer.style.display = 'block';
+      videoPlayer.play();
+    });
+  </script>
+</body>
+</html>
